@@ -5,4 +5,6 @@ RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y default-jdk git libxss1 libxcursor-dev libpangocairo-1.0 libgtk-3-0
+RUN apt-get install -y ruby
+RUN gem install gitlab_kramdown
 CMD ["/bin/bash", "-i"]
