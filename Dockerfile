@@ -3,9 +3,7 @@ RUN apt-get update -y
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install -y nodejs
-RUN apt-get install -y default-jre-headless git libxss1 libxcursor-dev libpangocairo-1.0 libgtk-3-0
-RUN apt-get install -y ruby
+RUN apt-get install -y nodejs default-jre-headless git libxss1 libxcursor-dev libpangocairo-1.0 libgtk-3-0 libx11-xcb1 ruby
 RUN gem install gitlab_kramdown
 RUN apt-get clean
 CMD ["/bin/bash", "-i"]
